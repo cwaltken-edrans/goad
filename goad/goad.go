@@ -52,6 +52,11 @@ var supportedRegions = []string{
 	"ap-southeast-2",
 }
 
+// SupportedRegions return an array of supported aws region
+func SupportedRegions() []string {
+	return supportedRegions
+}
+
 // Test type
 type Test struct {
 	Config  *TestConfig

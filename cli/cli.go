@@ -38,7 +38,7 @@ var (
 	timeout         = timeoutFlag.Int()
 	headersFlag     = app.Flag("header", "Add Arbitrary header line, eg. 'Accept-Encoding: gzip' (repeatable)").Short('H')
 	headers         = headersFlag.Strings()
-	regionsFlag     = app.Flag("region", "AWS regions to run in. Repeat flag to run in more then one region. (repeatable)")
+	regionsFlag     = app.Flag("region", "AWS regions to run in. Repeat flag to run in more then one region. (repeatable)").HintOptions(goad.SupportedRegions()...)
 	regions         = regionsFlag.Strings()
 	outputFileFlag  = app.Flag("output-json", "Optional path to file for JSON result storage")
 	outputFile      = outputFileFlag.String()
